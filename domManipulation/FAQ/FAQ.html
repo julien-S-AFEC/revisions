@@ -1,3 +1,40 @@
-<template>
-    <%=test%> 
-</template>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Test</title>
+    <link rel="stylesheet" href="FAQ.css">
+</head>
+
+<body>
+
+    <section id="faq">
+        <h2>FAQ - Drones</h2>
+
+        <input type="text" id="faq-search" placeholder="Rechercher une question..." />
+
+        <!-- Conteneur FAQ -->
+        <div id="faq-container"></div>
+
+        <!-- Template FAQ -->
+        <template id="faq-template">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span class="faq-title"></span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer"></div>
+            </div>
+        </template>
+
+
+    </section>
+
+
+
+    <script type="module" src="FAQ.js"></script>
+</body>
+
+</html>
