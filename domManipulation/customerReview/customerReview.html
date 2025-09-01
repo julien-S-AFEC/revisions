@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="customerReview.js"></script>
+    <link rel="stylesheet" href="customerReview.css">
+</head>
+
+<body>
+
+    <template id="add card-template">
+        <form class="card add">
+            <label for="name">Nom d'utilisateur :</label>
+            <input class="name" name="name" type="text">
+            <label for="rating">Votre note :</label>
+            <input class="rating" name="rating" type="number">
+            <label for="review">Votre avis :</label>
+            <textarea class="review" name="review" id=""></textarea>
+            <button id="submit" class="btn">Envoyer</button>
+        </form>
+    </template>
+
+    
+    <template id="card-template">
+        <article class="card">
+            <h3 class="name"></h3>
+            <p class="rating"></p>
+            <p class="review"></p>
+            <button id="del" class="btn del">Suprimer</button>
+        </article>
+    </template>
+    <section id="avis" >
+        
+    </section>
+
+
+
+</body>
+
+</html>
