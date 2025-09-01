@@ -15,7 +15,7 @@
     gap: 15px;
 }
 
-.totalPrice {
+.totalPriceSection {
     display: flex;
     gap: 20px;
 }
@@ -59,4 +59,14 @@
 #powerOptions {
     display: flex;
     gap: 3px;
+}
+
+.optionsSections {
+    display: flex;
+    gap: 5px;
+}
+
+.discountOptions {
+    display: flex;
+    gap: 5px;
 }

@@ -22,7 +22,16 @@
                 <form id="powerInputs" class="powerInputs">
                 </form>
             </div>
-            <div class="totalPrice">
+            <div class="optionsSections">
+                Options
+                <form id="optionsInputs" class="optionsInputs">
+                </form>
+            </div>
+            <div class="discountOptions">
+                <input type="checkbox" name="discountInput" id="discountInput">
+                <div id="discount">20% Discount</div>
+            </div>
+            <div class="totalPriceSection">
                 Total price:
                 <div class="price">
                     <div id="price"></div>
@@ -38,7 +47,14 @@
 
     <template id="powerFragment">
         <div id="powerOptions" class="powerOptions">
-            <input type="radio" name="power" class="powerIpnut">
+            <input type="radio" name="power" class="powerInput">
+            <label id="name"></label>
+        </div>
+    </template>
+
+    <template id="optionsFragment">
+        <div id="optionsRadio" class="optionsRadio">
+            <input type="radio" name="optionInput" class="optionInput">
             <label id="name"></label>
         </div>
     </template>
