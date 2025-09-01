@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./priceSimulation.css">
+</head>
+
+<body>
+    <div id="main">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/8783df3e4f75c9ea0012908b78acea85@ultra.webp"
+            class="productImg" alt="drone-img">
+        <div class="container">
+            <div class="colorSection">
+                Color
+                <select name="colorDropdown" id="colorDropdown">
+                </select>
+            </div>
+            <div class="powerSection">
+                Power
+                <form id="powerInputs" class="powerInputs">
+                </form>
+            </div>
+            <div class="optionsSections">
+                Options
+                <form id="optionsInputs" class="optionsInputs">
+                </form>
+            </div>
+            <div class="discountOptions">
+                <input type="checkbox" name="discountInput" id="discountInput">
+                <div id="discount">20% Discount</div>
+            </div>
+            <div class="totalPriceSection">
+                Total price:
+                <div class="price">
+                    <div id="price"></div>
+                    <div>€</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <template id="optionFragment">
+        <option></option>
+    </template>
+
+    <template id="powerFragment">
+        <div id="powerOptions" class="powerOptions">
+            <input type="radio" name="power" class="powerInput">
+            <label id="name"></label>
+        </div>
+    </template>
+
+    <template id="optionsFragment">
+        <div id="optionsRadio" class="optionsRadio">
+            <input type="radio" name="optionInput" class="optionInput">
+            <label id="name"></label>
+        </div>
+    </template>
+
+    <script src="./priceSimulation.js" type="module"></script>
+
+</body>
+
+</html>
