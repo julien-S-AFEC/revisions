@@ -59,6 +59,7 @@ INSERT INTO courses (title, category, price) VALUES
 ('Comptabilité pour entrepreneurs', 'Finance', 169.99),
 ('Investissement et bourse', 'Finance', 299.99),
 ('Anglais des affaires', 'Langues', 0.00);
+('Maths', 'maths', 5000)
 ;
 
 CREATE TABLE IF NOT EXISTS enrollments(
