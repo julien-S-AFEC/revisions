@@ -92,9 +92,6 @@ app.post("/api/register", async (req, res) => {
 });
 
 app.get('/verify', (req, res) => {
-    console.log(req.query.token)
-    console.log(req.query.hash)
-    console.log(req.query.mail)
     if (crypto.createHash("sha256").update(req.query.token).digest("hex") != req.query.hash) { return res.send("Error, the token is invalid or expired") }
     const db = new sqlite3.Database(
         path.join(path.resolve(), "/db/revisions.db")
@@ -111,18 +108,7 @@ app.get('/verify', (req, res) => {
         })
 })
 
-//Back
-// app.get('/api/getUsers', (req, res) => {
-//     const db = new sqlite3.Database(path.join(path.resolve(), '/db/revisions.db'));
 
-//     db.all("SELECT * FROM users", function (err, rows) {
-//         // Fermer la DB en premier, peu importe le résultat
-//         if (err) {
-//             return res.status(500).send(err);
-//         }
-//         res.json(rows); // Envoie toutes les données en une fois
-//     });
-// })
 
 app.listen(3000, () => {
     console.log("http://localhost:3000")
