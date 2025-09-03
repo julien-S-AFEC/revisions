@@ -3,8 +3,13 @@ import path from 'path'
 import dotenv from 'dotenv'
 import sqlite3 from 'sqlite3'
 import crypto from 'crypto'
+
+
+
+
 import { transporter } from "./mailer.js";
 import { body, validationResult } from "express-validator";
+
 dotenv.config()
 
 const generateToken = () => {
@@ -33,7 +38,8 @@ const token = generateToken()
 console.log(isTokenValid(token))
 
 const app = express()
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(path.resolve(), "front")));
 // app.use(bodyParser())
 
 // Front
@@ -52,6 +58,18 @@ app.get('/api/getUsers', (req, res) => {
         }
         res.json(rows); // Envoie toutes les données en une fois
     });
+})
+
+
+
+app.get('/contact', (req, res)=>{
+    res.sendFile(path.join(path.resolve(), "/front/contact.html"))
+})
+app.post('/contact/y', (req, res)=>{
+
+    console.log(req.body)
+
+ 
 })
 
 app.get("/welcome-form", (req, res) => {
@@ -94,6 +112,7 @@ app.post(
     }
   }
 );
+
 
 app.listen(3000, () => {
     console.log("http://localhost:3000")
