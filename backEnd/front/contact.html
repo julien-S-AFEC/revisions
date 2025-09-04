@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SQL revision</title>
-    
+    <script type="module" src="./contact.js" defer></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
 <body>
     <div style="height: 100vh; width: 100vw;" class="container ">
-        <form id="form" style="height: 100%;  width: 100%; display: flex; flex-direction: column;justify-content: space-around;align-items: center;" >
+        <form enctype =" multipart/form-data"  id="form"
+            style="height: 100%;  width: 100%; display: flex; flex-direction: column;justify-content: space-around;align-items: center;">
             <h1>Formulaire de contact</h1>
             <label style=" width: 100%;" for="name">
                 Nom
@@ -22,21 +23,21 @@
                 Email
             </label>
             <input style=" width: 100%;" type="text" name="email">
-            <label style=" width: 100%;" for="message" >
+            <label style=" width: 100%;" for="message">
                 Message
             </label>
-            <textarea style=" width: 100%; min-height: 200px;" name="message" style="min-height: 200px;">
-        </textarea>
+            <textarea style=" width: 100%; min-height: 200px;" name="message" style="min-height: 200px;"></textarea>
 
-                    <label style=" width: 100%;" for="fileJoin">
-                Piece jointe
-            </label>
-            <input type="file" name="fileJoin">
-            <button id="submit"  style=" width: 100%;" class="btn btn-primary">Envoyer</button>
+                           <label style=" width: 100%;" for="fileJoin">
+            Piece jointe
+        </label>
+        <input accept="image/*" id="fileJoin" type="file" name="file">
+            <button id="submit" style=" width: 100%;" class="btn btn-primary">Envoyer</button> 
+    
+    </div>
         </form>
 
-    </div>
- 
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
