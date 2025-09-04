@@ -2,14 +2,11 @@ import 'dotenv/config'
 
 import express from 'express'
 import path from 'path'
-import crypto from 'crypto'
 import bodyParser from 'body-parser'
 import sqlite3 from 'sqlite3'
 import { transporter } from './mailer/mailer.js'
 import crypto from 'crypto'
 import { body, validationResult } from "express-validator";
-
-dotenv.config()
 
 const generateToken = () => {
     const token = crypto.randomBytes(32).toString("hex");
